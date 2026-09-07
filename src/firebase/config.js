@@ -12,11 +12,10 @@ const firebaseConfig = {
   projectId: "lyubov-a1bdc",
   storageBucket: "lyubov-a1bdc.firebasestorage.app",
   messagingSenderId: "609120211206",
-  appId: "1:609120211206:web:31318b88f7dc6906c84e87",
-  measurementId: "G-8FQH4811MT"
+  appId: "1:609120211206:web:97b66e45b5085d11c84e87",
+  measurementId: "G-J8CQ128BB6"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-
