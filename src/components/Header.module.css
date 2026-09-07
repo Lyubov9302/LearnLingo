@@ -1,0 +1,77 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1184px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #121417;
+}
+
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav a {
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #121417;
+  transition: color 0.2s ease;
+}
+
+.nav a:hover,
+.nav a.active {
+  color: #f4c550; 
+}
+
+
+.authButtons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.btnLogin {
+  background: transparent;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #121417;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btnRegister {
+  display: block;
+  min-width: 166px;
+  background-color: #121417;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 39px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
