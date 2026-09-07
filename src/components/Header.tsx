@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <Link to="/" className={styles.logo}>
-        <img src="/public/ukraine.png" alt="" width="28" height="28" />
+        <img src="/ukraine.png" alt="" width="28" height="28" />
         <span>LearnLingo</span>
       </Link>
 
@@ -16,7 +16,7 @@ export default function Header() {
 
       <div className={styles.authButtons}>
         <button type="button" className={styles.btnLogin}>
-          <img src="/public/log-in-01.svg" alt="" width="20" height="20" />
+          <img src="/log-in-01.svg" alt="" width="20" height="20" />
           <span>Log in</span>
         </button>
         <button type="button" className={styles.btnRegister}>
