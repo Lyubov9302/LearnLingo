@@ -1,19 +1,20 @@
-import { useRoutes, Navigate } from 'react-router-dom';
-import HomePage from './pages/HomePage';
+import { Routes, Route, Navigate } from 'react-router-dom';
+
 import TeachersPage from './pages/TeachersPage';
-import Header from './components/Header';
 
-export default function App() {
-  const routes = useRoutes([
-    { path: '/', element: <HomePage /> },
-    { path: '/teachers', element: <TeachersPage /> },
-    { path: '*', element: <Navigate to="/" replace /> },
-  ]);
+import Header from './components/Header/Header';
+import HomePage from './pages/HomePage';
 
+
+export const App = () => {
   return (
-    <div>
-      <Header /> 
-      <main>{routes}</main>
-    </div>
+    <>
+      <Header />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/teachers" element={<TeachersPage />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </>
   );
-}
+};
