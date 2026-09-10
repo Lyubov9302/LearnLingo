@@ -1,7 +1,12 @@
 import { Link, NavLink } from 'react-router-dom';
 import styles from './Header.module.css';
+import LogInModal from '../Modal/LogInModal/LogInModal';
+import RegisterModal from '../Modal/RegisterModal/RegisterModal';
+import { useState } from 'react';
 
 export default function Header() {
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const [isRegisterOpen, setIsRegisterOpen] = useState(false);
   return (
     <header className={styles.header}>
       <Link to="/" className={styles.logo}>
@@ -15,14 +20,29 @@ export default function Header() {
       </nav>
 
       <div className={styles.authButtons}>
-        <button type="button" className={styles.btnLogin}>
+        <button type="button" className={styles.btnLogin}
+        onClick={() => setIsLoginOpen(true)}
+        >
           <img src="/log-in-01.svg" alt="" width="20" height="20" />
           <span>Log in</span>
+          
         </button>
-        <button type="button" className={styles.btnRegister}>
+        <button type="button" className={styles.btnRegister}
+        onClick={() => setIsRegisterOpen(true)}
+        >
           Registration
         </button>
       </div>
+
+
+      <LogInModal 
+        isOpen={isLoginOpen} 
+        onClose={() => setIsLoginOpen(false)} 
+      />
+      <RegisterModal 
+        isOpen={isRegisterOpen} 
+        onClose={() => setIsRegisterOpen(false)} 
+      />
     </header>
   );
 }
