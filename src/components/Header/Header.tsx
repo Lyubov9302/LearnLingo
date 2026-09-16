@@ -1,8 +1,8 @@
 import { Link, NavLink } from 'react-router-dom';
 import styles from './Header.module.css';
-import LogInModal from '../Modal/LogInModal/LogInModal';
-import RegisterModal from '../Modal/RegisterModal/RegisterModal';
+
 import { useState } from 'react';
+import { LoginModal, RegisterModal } from '../AuthModal/AuthModal';
 
 export default function Header() {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
@@ -35,7 +35,7 @@ export default function Header() {
       </div>
 
 
-      <LogInModal 
+      <LoginModal 
         isOpen={isLoginOpen} 
         onClose={() => setIsLoginOpen(false)} 
       />
