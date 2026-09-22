@@ -1,0 +1,232 @@
+.card {
+  display: flex;
+  gap: 24px;
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 24px;
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.avatarWrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  min-width: 120px;
+  border: 3px solid #fbe9ba;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.onlineStatus {
+  position: absolute;
+  top: 19px;
+  right: 19px;
+  width: 12px;
+  height: 12px;
+  background-color: #38cd3e;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #8a8a89;
+  margin-bottom: 8px;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: 500;
+  color: #121417;
+}
+
+.statsGroup {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #121417;
+}
+
+.statItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.divider {
+  color: rgba(18, 20, 23, 0.2);
+}
+
+.starIcon {
+  color: #ffc531;
+  fill: #ffc531;
+}
+
+.price {
+  color: #38cd3e;
+}
+
+.favoriteBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 48px;
+  display: flex;
+  align-items: center;
+}
+
+.heartDefault {
+  color: #121417;
+  transition: color 0.2s ease;
+}
+
+.heartActive {
+  color: #f43f5e;
+  fill: #f43f5e;
+}
+
+.detailsList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.detailTitle {
+  color: #8a8a89;
+}
+
+.underlined {
+  text-decoration: underline;
+}
+
+.readMoreBtn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: underline;
+  color: #121417;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 32px;
+}
+
+.expandedContent {
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+
+.experience {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #121417;
+  margin-bottom: 32px;
+}
+
+.reviewsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.reviewerHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.reviewerAvatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #fbe9ba;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #121417;
+}
+
+.reviewerName {
+  font-weight: 500;
+  color: #8a8a89;
+}
+
+.reviewerRating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.comment {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #121417;
+}
+
+.levelsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.levelBadge {
+  padding: 8px 12px;
+  border: 1px solid rgba(18, 20, 23, 0.2);
+  border-radius: 35px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.bookBtn {
+  background-color: #f4c542;
+  border: none;
+  border-radius: 12px;
+  padding: 16px 48px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #121417;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.bookBtn:hover {
+  background-color: #fbe9ba;
+}

@@ -21,32 +21,22 @@
   position: relative;
 }
 
-.eyeBtnLogin {
-  position: absolute;
-  top: 88px;
-  right: 18px;
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #121417;
+.inputWrapper {
+  position: relative;
+  width: 100%;
 }
 
-.eyeBtnRegister {
+.eyeBtn {
   position: absolute;
-  top: 160px;
   right: 18px;
-  background: none;
+  top: 18px;
+  background: transparent;
   border: none;
-  padding: 0;
   cursor: pointer;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #121417;
 }
 
 .input {
@@ -79,4 +69,21 @@
 
 .submitBtn:hover {
   background-color: #ffdc80;
+}
+
+.inputWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.errorMessage {
+  color: #f43f5e;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.firebaseError {
+  color: #f43f5e;
+  font-size: 14px;
+  text-align: center;
 }

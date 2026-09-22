@@ -1,9 +1,9 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 
-import TeachersPage from './pages/TeachersPage';
+import TeachersPage  from './pages/TeachersPage/TeachersPage';
 
 import Header from './components/Header/Header';
-import HomePage from './pages/HomePage';
+import HomePage from './pages/HomePage/HomePage';
 
 
 export const App = () => {
