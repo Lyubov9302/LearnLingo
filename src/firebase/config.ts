@@ -5,6 +5,7 @@ import { getDatabase } from "firebase/database";
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY, 
   authDomain: "lyubov-a1bdc.firebaseapp.com",
+  databaseURL: "https://lyubov-a1bdc-default-rtdb.europe-west1.firebasedatabase.app",
   projectId: "lyubov-a1bdc",
   storageBucket: "lyubov-a1bdc.firebasestorage.app",
   messagingSenderId: "609120211206",

@@ -5,7 +5,7 @@ import { TeacherCard } from "../../components/TeacherCard/TeacherCard";
 import { useAuth } from "../../components/hooks/useAuth";
 import type { Teacher } from "../../types/teacher";
 
-export default function TeachersPage() {
+export default function FavoritesPage() {
   const [teachers, setTeachers] = useState<Teacher[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
 
@@ -21,9 +21,8 @@ export default function TeachersPage() {
           const teachersList: Teacher[] = Array.isArray(data)
             ? data
             : Object.values(data);
+            
           setTeachers(teachersList);
-        } else {
-          console.log("Дані відсутні у базі");
         }
       } catch (error) {
         console.error("Помилка при отриманні вчителів:", error);
@@ -36,24 +35,28 @@ export default function TeachersPage() {
   }, []);
 
   if (loading) {
-    return <p>Loading teachers...</p>;
+    return <p>Loading favorite teachers...</p>;
   }
+
+  // Фільтруємо список: залишаємо лише тих вчителів, ID яких є у favorites
+  const favoriteTeachers = teachers.filter((teacher, index) => {
+    const teacherId = String(teacher.id ?? index);
+    return favorites.includes(teacherId);
+  });
 
   return (
     <div className="container">
-      {teachers.length === 0 ? (
-        <p>No teachers found.</p>
+      {favoriteTeachers.length === 0 ? (
+        <p>You haven't added any teachers to your favorites yet.</p>
       ) : (
-        teachers.map((teacher, index) => {
+        favoriteTeachers.map((teacher, index) => {
           const teacherId = String(teacher.id ?? index);
-          const isFavorite = favorites.includes(teacherId);
-        
 
           return (
             <TeacherCard
               key={teacherId}
               teacher={teacher}
-              isFavorite={isFavorite}
+              isFavorite={true}
               onToggleFavorite={() => toggleFavorite(teacherId)}
               onBookLesson={() => {}}
             />

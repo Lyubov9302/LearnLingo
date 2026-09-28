@@ -6,7 +6,7 @@ import styles from "./TeacherCard.module.css";
 interface TeacherCardProps {
   teacher: Teacher;
   isFavorite: boolean;
-  onToggleFavorite: (teacherId: string) => void;
+ onToggleFavorite: () => void;
   onBookLesson: (teacher: Teacher) => void;
 }
 
@@ -60,7 +60,9 @@ export const TeacherCard = ({
             <button
               type="button"
               className={styles.favoriteBtn}
-              onClick={() => onToggleFavorite(teacher.id)}
+              onClick={() => {
+    onToggleFavorite();
+              }}
               aria-label="Add to favorites"
             >
               <FiHeart
@@ -75,7 +77,7 @@ export const TeacherCard = ({
           <li>
             <span className={styles.detailTitle}>Speaks: </span>
             <span className={styles.underlined}>
-              {teacher.languages.join(", ")}
+              {teacher.languages?.join(", ")}
             </span>
           </li>
           <li>
@@ -84,7 +86,7 @@ export const TeacherCard = ({
           </li>
           <li>
             <span className={styles.detailTitle}>Conditions: </span>
-            {teacher.conditions.join(" ")}
+            {teacher.conditions?.join(" ")}
           </li>
         </ul>
 
@@ -127,7 +129,7 @@ export const TeacherCard = ({
         )}
 
         <div className={styles.levelsList}>
-          {teacher.levels.map((level) => (
+          {teacher.levels?.map((level) => (
             <span key={level} className={styles.levelBadge}>
               #{level}
             </span>
