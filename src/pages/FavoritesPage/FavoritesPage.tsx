@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { ref, get } from "firebase/database";
-import { db } from "../../firebase/config";
+import { db } from "../../firebase/config"; // 👈 виправляємо шлях до firebase, якщо треба
 import { TeacherCard } from "../../components/TeacherCard/TeacherCard";
 import { useAuth } from "../../components/hooks/useAuth";
 import type { Teacher } from "../../types/teacher";
@@ -19,7 +19,7 @@ export default function FavoritesPage() {
         if (snapshot.exists()) {
           const data = snapshot.val();
           const teachersList: Teacher[] = Array.isArray(data)
-            ? data
+            ? data.filter(Boolean)
             : Object.values(data);
             
           setTeachers(teachersList);
@@ -38,9 +38,9 @@ export default function FavoritesPage() {
     return <p>Loading favorite teachers...</p>;
   }
 
-  // Фільтруємо список: залишаємо лише тих вчителів, ID яких є у favorites
+  // Фільтруємо список за ідентичним алгоритмом генерації ID
   const favoriteTeachers = teachers.filter((teacher, index) => {
-    const teacherId = String(teacher.id ?? index);
+    const teacherId = teacher.id || `${teacher.name}-${teacher.surname}-${index}`;
     return favorites.includes(teacherId);
   });
 
@@ -50,7 +50,7 @@ export default function FavoritesPage() {
         <p>You haven't added any teachers to your favorites yet.</p>
       ) : (
         favoriteTeachers.map((teacher, index) => {
-          const teacherId = String(teacher.id ?? index);
+          const teacherId = teacher.id || `${teacher.name}-${teacher.surname}-${index}`;
 
           return (
             <TeacherCard

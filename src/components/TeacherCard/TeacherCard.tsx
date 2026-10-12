@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { FiHeart, FiStar, FiBookOpen } from "react-icons/fi";
+import { BookLessonModal } from "../BookLessonModal/BookLessonModal"; // 👈 імпортуй модалку
 import type { Teacher } from "../../types/teacher";
 import styles from "./TeacherCard.module.css";
 
 interface TeacherCardProps {
   teacher: Teacher;
   isFavorite: boolean;
- onToggleFavorite: () => void;
+  onToggleFavorite: () => void;
   onBookLesson: (teacher: Teacher) => void;
 }
 
@@ -17,6 +18,7 @@ export const TeacherCard = ({
   onBookLesson,
 }: TeacherCardProps) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false); // 👈 стан для відкриття модалки
 
   return (
     <div className={styles.card}>
@@ -61,7 +63,7 @@ export const TeacherCard = ({
               type="button"
               className={styles.favoriteBtn}
               onClick={() => {
-    onToggleFavorite();
+                onToggleFavorite();
               }}
               aria-label="Add to favorites"
             >
@@ -140,12 +142,23 @@ export const TeacherCard = ({
           <button
             type="button"
             className={styles.bookBtn}
-            onClick={() => onBookLesson(teacher)}
+            onClick={() => {
+              onBookLesson(teacher);
+              setIsModalOpen(true); // 👈 відкриваємо модалку при кліку
+            }}
           >
             Book trial lesson
           </button>
         )}
       </div>
+
+      {/* Рендеримо модальне вікно, коли воно відкрите */}
+      {isModalOpen && (
+        <BookLessonModal
+          teacher={teacher}
+          onClose={() => setIsModalOpen(false)}
+        />
+      )}
     </div>
   );
 };
