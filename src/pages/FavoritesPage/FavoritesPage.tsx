@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { ref, get } from "firebase/database";
-import { db } from "../../firebase/config"; // 👈 виправляємо шлях до firebase, якщо треба
+import { db } from "../../firebase/config"; 
 import { TeacherCard } from "../../components/TeacherCard/TeacherCard";
 import { useAuth } from "../../components/hooks/useAuth";
 import type { Teacher } from "../../types/teacher";
@@ -38,7 +38,7 @@ export default function FavoritesPage() {
     return <p>Loading favorite teachers...</p>;
   }
 
-  // Фільтруємо список за ідентичним алгоритмом генерації ID
+
   const favoriteTeachers = teachers.filter((teacher, index) => {
     const teacherId = teacher.id || `${teacher.name}-${teacher.surname}-${index}`;
     return favorites.includes(teacherId);

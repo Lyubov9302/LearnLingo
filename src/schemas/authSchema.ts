@@ -1,6 +1,6 @@
 import * as yup from "yup";
 
-// Схема для Реєстрації
+
 export const registerSchema = yup.object({
   name: yup
     .string()
@@ -16,7 +16,7 @@ export const registerSchema = yup.object({
     .min(6, "Пароль має містити щонайменше 6 символів"),
 });
 
-// Схема для LogIn
+
 export const logInSchema = yup.object({
   email: yup
     .string()
@@ -27,6 +27,5 @@ export const logInSchema = yup.object({
     .required("Пароль є обов'язковим"),
 });
 
-// Типи TypeScript на основі схем
 export type RegisterFormData = yup.InferType<typeof registerSchema>;
 export type LogInFormData = yup.InferType<typeof logInSchema>;

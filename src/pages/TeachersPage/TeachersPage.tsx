@@ -14,10 +14,10 @@ const TeachersPage = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [visibleCount, setVisibleCount] = useState<number>(ITEMS_PER_PAGE);
 
-  // Отримуємо статус авторизації, список обраних та функцію з контексту
+
   const { isLoggedIn, favorites, toggleFavorite } = useAuth();
 
-  // Стани фільтрів
+
   const [selectedLanguage, setSelectedLanguage] = useState<string>("");
   const [selectedLevel, setSelectedLevel] = useState<string>("");
   const [selectedPrice, setSelectedPrice] = useState<string>("");
@@ -46,11 +46,10 @@ const TeachersPage = () => {
     fetchTeachers();
   }, []);
 
-  // Перевірка при кліку на сердечко
+
   const handleToggleFavorite = (teacherId: string) => {
     if (!isLoggedIn) {
       alert("Будь ласка, увійдіть у систему, щоб додати викладача до улюблених!");
-      // Тут за бажанням можна викликати відкриття модалки логіну
       return;
     }
     toggleFavorite(teacherId);

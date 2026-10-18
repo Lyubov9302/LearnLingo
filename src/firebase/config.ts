@@ -13,9 +13,9 @@ const firebaseConfig = {
   measurementId: "G-J8CQ128BB6"
 };
 
-// Ініціалізація Firebase
+
 const app = initializeApp(firebaseConfig);
 
-// Ініціалізація та експорт сервісів
+
 export const auth = getAuth(app);
 export const db = getDatabase(app);

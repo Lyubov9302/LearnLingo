@@ -23,7 +23,6 @@ export const Filters = ({
 }: FiltersProps) => {
   return (
     <div className={styles.filtersContainer}>
-      {/* Фільтр за мовою */}
       <div className={styles.filterGroup}>
         <label className={styles.label}>Languages</label>
         <select
@@ -57,7 +56,6 @@ export const Filters = ({
         </select>
       </div>
 
-      {/* Фільтр за ціною */}
       <div className={styles.filterGroup}>
         <label className={styles.label}>Price</label>
         <select

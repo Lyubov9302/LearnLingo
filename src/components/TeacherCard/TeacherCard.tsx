@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FiHeart, FiStar, FiBookOpen } from "react-icons/fi";
-import { BookLessonModal } from "../BookLessonModal/BookLessonModal"; // 👈 імпортуй модалку
+import { BookLessonModal } from "../BookLessonModal/BookLessonModal"; 
 import type { Teacher } from "../../types/teacher";
 import styles from "./TeacherCard.module.css";
 
@@ -18,7 +18,7 @@ export const TeacherCard = ({
   onBookLesson,
 }: TeacherCardProps) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false); // 👈 стан для відкриття модалки
+  const [isModalOpen, setIsModalOpen] = useState(false); 
 
   return (
     <div className={styles.card}>
@@ -144,7 +144,7 @@ export const TeacherCard = ({
             className={styles.bookBtn}
             onClick={() => {
               onBookLesson(teacher);
-              setIsModalOpen(true); // 👈 відкриваємо модалку при кліку
+              setIsModalOpen(true); 
             }}
           >
             Book trial lesson
@@ -152,7 +152,6 @@ export const TeacherCard = ({
         )}
       </div>
 
-      {/* Рендеримо модальне вікно, коли воно відкрите */}
       {isModalOpen && (
         <BookLessonModal
           teacher={teacher}

@@ -106,8 +106,8 @@
 }
 
 .heartActive {
-  color: #f43f5e;
-  fill: #f43f5e;
+  color:  #f4c550;
+  fill:  #f4c550;
 }
 
 .detailsList {
@@ -134,6 +134,7 @@
   border: none;
   font-size: 16px;
   font-weight: 500;
+  line-height: 1.5;
   text-decoration: underline;
   color: #121417;
   cursor: pointer;
@@ -216,7 +217,7 @@
 }
 
 .bookBtn {
-  background-color: #f4c542;
+  background-color: #f4c550;
   border: none;
   border-radius: 12px;
   padding: 16px 48px;
@@ -228,5 +229,5 @@
 }
 
 .bookBtn:hover {
-  background-color: #fbe9ba;
+  background-color: #ffdc86;
 }
