@@ -19,7 +19,7 @@ Technologies:
 • CSS Modules
 • Vercel
 
-Figma layout - LearnLingo 
+Figma layout - LearnLingo
 
 Technical Requirements:
 1. User authentication (registration, login, retrieving current user data, and logout) using Firebase.
