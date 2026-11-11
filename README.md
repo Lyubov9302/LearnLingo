@@ -2,22 +2,22 @@ LearnLingo is a web application for a company that offers online language tutori
 The application allows users to find suitable teachers using such filters:  language, level of knowledge and price.
 
 The application consists of 3 pages:
-• “Home” page featuring the company’s advantages and a call-to-action link that redirects the user to the “Teachers” page.
-• “Teachers” page containing a list of teachers.
-• private “Favorites” page displaying the teachers the user has added to their “favorites”
+- “Home” page featuring the company’s advantages and a call-to-action link that redirects the user to the “Teachers” page.
+- “Teachers” page containing a list of teachers.
+- private “Favorites” page displaying the teachers the user has added to their “favorites”
 
 Technologies: 
-• React
-• TypeScript
-• Vite
-• React Router
-• Firebase Authentication
-• Firebase Realtime Database
-• React Hook Form
-• Yup
-• React Hot Toast
-• CSS Modules
-• Vercel
+- React
+- TypeScript
+- Vite
+- React Router
+- Firebase Authentication
+- Firebase Realtime Database
+- React Hook Form
+- Yup
+- React Hot Toast
+- CSS Modules
+- Vercel
 
 Figma layout - [LearnLingo](https://www.figma.com/design/dewf5jVviSTuWMMyU3d8Mc/Learn-Lingo?node-id=0-1&p=f&t=T73QQLOcEzoDt9FA-0)
 
